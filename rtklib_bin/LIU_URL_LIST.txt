@@ -1,0 +1,157 @@
+#-------------------------------------------------------------------------------
+# URL_LIST.txt : url address list of gnss data for rtkget
+#
+# notes :
+#     keywords in a url address are replaced as follows.
+#
+#         %Y -> yyyy    : year (4 digits) (2000-2099)
+#         %y -> yy      : year (2 digits) (00-99)
+#         %m -> mm      : month           (01-12)
+#         %d -> dd      : day of month    (01-31)
+#         %h -> hh      : hours           (00-23)
+#         %H -> a       : hour code       (a-x)
+#         %M -> mm      : minutes         (00-59)
+#         %n -> ddd     : day of year     (001-366)
+#         %W -> wwww    : gps week        (0001-9999)
+#         %D -> d       : day of gps week (0-6)
+#         %s -> ssss    : station name    (lower-case)
+#         %S -> SSSS    : station name    (upper-case)
+#         %r -> rrrr    : station name
+#         %{env} -> env : environment variable
+#
+#     strings after # in a line are treated as comments
+#
+# version : $Revision:$ $Date:$
+# history : 2012/12/28  1.1  new
+#           2020/07/10  1.2  update url address
+#           2020/11/30  1.3  CDDIS address -> ftp://igs.gnsswhu.cn/pub/
+#-------------------------------------------------------------------------------
+
+# data type    url Address                                                      default local directory
+
+#! PRODUCT (WHU)
+IGS_IGS_FIN_ORB       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igs%W%D.sp3.Z                             E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_FIN_CLK       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igs%W%D.clk.Z                             E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_FIN_CLK30S    ftp://igs.gnsswhu.cn/pub/gps/products/%W/igs%W%D.clk_30s.Z                         E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_FIN_ERP       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igs%W7.erp.Z                              E:\PPP_AR-master\GNSS_DATA\%Y\igs_erp
+IGS_IGS_RAP_ORB       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igr%W%D.sp3.Z                             E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_RAP_CLK       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igr%W%D.clk.Z                             E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_RAP_ERP       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igr%W%D.erp.Z                             E:\PPP_AR-master\GNSS_DATA\%Y\igs_erp
+IGS_IGS_URA_ORB       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igu%W%D_%h.sp3.Z                          E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_URA_ERP       ftp://igs.gnsswhu.cn/pub/gps/products/%W/igu%W%D_%h.erp.Z                          E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_FIN_SNXWEEK      ftp://igs.gnsswhu.cn/pub/gps/products/%W/igs%yP%W.snx.Z                            E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_FIN_SNXDAILY     ftp://igs.gnsswhu.cn/pub/gps/products/%W/igs%yP%W%D.snx.Z                          E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs
+IGS_IGS_FIN_ZPD       ftp://igs.gnsswhu.cn/pub/gps/products/troposphere/new/%Y/%n/%s%n0.%yzpd.gz         E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs_zpd
+IGS_IGS_FIN_TEC       ftp://igs.gnsswhu.cn/pub/gps/products/ionex/%Y/%n/igsg%n0.%yi.Z                    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs_ion
+IGS_IGS_RAP_TEC       ftp://igs.gnsswhu.cn/pub/gps/products/ionex/%Y/%n/igrg%n0.%yi.Z                    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs_ion
+
+WUM_MGX_FIN_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/WUM0MGXFIN_%Y%n0000_01D_15M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+WUM_MGX_FIN_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/WUM0MGXFIN_%Y%n0000_01D_30S_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+WUM_MGX_FIN_ERP  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/WUM0MGXFIN_%Y%n0000_01D_01D_ERP.ERP.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+WUM_MGX_RAP_OSB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/WUM0MGXRAP_%Y%n0000_01D_01D_OSB.BIA.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+WUM_MGX_ULA_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/WUM0MGXULA_%Y%n%h00_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+
+COD_MGX_FIN_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/COD0MGXFIN_%Y%n0000_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\com
+COD_MGX_FIN_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/COD0MGXFIN_%Y%n0000_01D_30S_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\com
+COD_MGX_FIN_ERP  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/COD0MGXFIN_%Y%n0000_03D_12H_ERP.ERP.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\com
+COD_MGX_FIN_OSB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/COD0MGXFIN_%Y%n0000_01D_01D_OSB.BIA.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\com
+COD_MGX_FIN_OBX  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/COD0MGXFIN_%Y%n0000_01D_15M_ATT.OBX.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\com
+
+GFZ_MGX_RAP_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GFZ0MGXRAP_%Y%n0000_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+GFZ_MGX_RAP_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GFZ0MGXRAP_%Y%n0000_01D_30S_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+GFZ_MGX_RAP_ERP  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GFZ0MGXRAP_%Y%n0000_01D_01D_ERP.ERP.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+GFZ_MGX_RAP_OSB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GFZ0MGXRAP_%Y%n0000_01D_01D_OSB.BIA.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+GFZ_MGX_RAP_REL  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GFZ0MGXRAP_%Y%n0000_01D_01D_REL.BIA.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+GFZ_MGX_RAP_OBX  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GFZ0MGXRAP_%Y%n0000_01D_30S_ATT.OBX.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+
+GRG_MGX_FIN_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GRG0MGXFIN_%Y%n0000_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\grm
+GRG_MGX_FIN_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GRG0MGXFIN_%Y%n0000_01D_30S_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\grm
+#GRG_MGX_FIN_ERP  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GRG0MGXFIN_%Y%n0000_01D_01D_ERP.ERP.gz E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\grm
+GRG_MGX_FIN_OSB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GRG0MGXFIN_%Y%n0000_01D_01D_OSB.BIA.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\grm
+GRG_MGX_FIN_OBX  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/GRG0MGXFIN_%Y%n0000_01D_30S_ATT.OBX.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\grm
+
+IAC_MGX_FIN_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/IAC0MGXFIN_%Y%n0000_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\iac
+IAC_MGX_FIN_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/IAC0MGXFIN_%Y%n0000_01D_30S_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\iac
+
+JAX_MGX_FIN_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/JAX0MGXFIN_%Y%n0000_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\jax
+JAX_MGX_FIN_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/JAX0MGXFIN_%Y%n0000_01D_30S_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\jax
+
+SHA_MGX_RAP_ORB  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/SHA0MGXRAP_%Y%n0000_01D_05M_ORB.SP3.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\sha
+SHA_MGX_RAP_CLK  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/SHA0MGXRAP_%Y%n0000_01D_05M_CLK.CLK.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\sha
+SHA_MGX_RAP_ERP  ftp://igs.gnsswhu.cn/pub/gps/products/mgex/%W/SHA0MGXRAP_%Y%n0000_01D_01D_ERP.ERP.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\sha
+
+CAS_MGX_RAP_DCB  ftp://ftp.gipp.org.cn/product/dcb/mgex/%Y/CAS0MGXRAP_%Y%n0000_01D_01D_DCB.BSX.gz      E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cas
+CAS_MGX_RAP_OSB  ftp://ftp.gipp.org.cn/product/dcb/mgex/%Y/CAS0MGXRAP_%Y%n0000_01D_01D_OSB.BIA.gz      E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cas
+
+COD_IGS_DCB_P1C1   http://ftp.aiub.unibe.ch/CODE/%Y/P1C1%y%m.DCB.Z                                     E:\PPP_AR-master\GNSS_DATA\%Y\dcb
+COD_IGS_DCB_P1P2   http://ftp.aiub.unibe.ch/CODE/%Y/P1P2%y%m.DCB.Z                                     E:\PPP_AR-master\GNSS_DATA\%Y\dcb
+COD_IGS_DCB_P2C2   http://ftp.aiub.unibe.ch/CODE/%Y/P2C2%y%m_RINEX.DCB.Z                               E:\PPP_AR-master\GNSS_DATA\%Y\dcb
+COD_IGS_DCB_P1C1N  http://ftp.aiub.unibe.ch/CODE/P1C1.DCB                                              E:\PPP_AR-master\GNSS_DATA\%Y\dcb
+COD_IGS_DCB_P1P2N  http://ftp.aiub.unibe.ch/CODE/P1P2.DCB                                              E:\PPP_AR-master\GNSS_DATA\%Y\dcb
+COD_IGS_DCB_P2C2N  http://ftp.aiub.unibe.ch/CODE/P2C2_RINEX.DCB                                        E:\PPP_AR-master\GNSS_DATA\%Y\dcb
+COD_IGS_FIN_TEC    ftp://igs.gnsswhu.cn/pub/gps/products/ionex/%Y/%n/codg%n0.%yi.Z                     E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\igs_ion
+COD_IGS_FIN_CLK5S  http://ftp.aiub.unibe.ch/CODE/%Y/COD%W%D_v3.CLK_05S.Z                               E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cod
+
+#！PRODUCT (ESA)
+ESA_MGX_FIN_ORB      http://navigation-office.esa.int/products/gnss-products/%W/ESA0MGNFIN_%Y%n0000_01D_05M_ORB.SP3.gz    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\esa
+ESA_MGX_FIN_CLK      http://navigation-office.esa.int/products/gnss-products/%W/ESA0MGNFIN_%Y%n0000_01D_30S_CLK.CLK.gz    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\esa
+ESA_MGX_FIN_ERP      http://navigation-office.esa.int/products/gnss-products/%W/ESA0MGNFIN_%Y%n0000_01D_01D_ERP.ERP.gz    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\esa
+ESA_MGX_FIN_ISB      http://navigation-office.esa.int/products/gnss-products/%W/ESA0MGNFIN_%Y%n0000_01D_01D_ISB.BIA.gz    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\esa
+
+#！PRODUCT (WHU_PRIDE)
+PRIDE_MGX_RAP_ORB    ftp://igs.gnsswhu.cn/pub/whu/phasebias/%Y/orbit/WUM0MGXRAP_%Y%n0000_01D_01M_ORB.SP3.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+PRIDE_MGX_RAP_CLK    ftp://igs.gnsswhu.cn/pub/whu/phasebias/%Y/clock/WUM0MGXRAP_%Y%n0000_01D_30S_CLK.CLK.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+PRIDE_MGX_RAP_ERP    ftp://igs.gnsswhu.cn/pub/whu/phasebias/%Y/orbit/WUM0MGXRAP_%Y%n0000_01D_01D_ERP.ERP.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+PRIDE_MGX_RAP_OSB    ftp://igs.gnsswhu.cn/pub/whu/phasebias/%Y/bias/WUM0MGXRAP_%Y%n0000_01D_01D_ABS.BIA.gz    E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+PRIDE_MGX_RAP_OBX    ftp://igs.gnsswhu.cn/pub/whu/phasebias/%Y/orbit/WUM0MGXRAP_%Y%n0000_01D_30S_ATT.OBX.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\wum
+
+#！PRODUCT (CNES)
+CNT_MGX_FIN_ORB         http://www.ppp-wizard.net/products/REAL_TIME/cnt%W%D.sp3.gz      E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cnt
+CNT_MGX_FIN_CLK         http://www.ppp-wizard.net/products/REAL_TIME/cnt%W%D.clk.gz      E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cnt
+CNT_MGX_FIN_BIA         http://www.ppp-wizard.net/products/REAL_TIME/cnt%W%D.bia.gz      E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cnt
+CNT_MGX_FIN_OBX         http://www.ppp-wizard.net/products/REAL_TIME/cnt%W%D.obx.gz      E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\cnt
+CNT_MGX_FIN_POST        http://www.ppp-wizard.net/products/POST_PROCESSED/post_%Y%n.tgz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\gfz
+
+#! DATA (WHU)
+IGS_OBS2        ftp://igs.gnsswhu.cn/pub/gps/data/daily/%Y/%n/%yd/%s%n0.%yd.Z                              E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+IGS_OBS3        ftp://igs.gnsswhu.cn/pub/gps/data/daily/%Y/%n/%yd/%S00*_R_%Y%n0000_01D_30S_MO.crx.gz       E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+IGS_OBS3_HR     ftp://igs.gnsswhu.cn/pub/highrate/%Y/%n/%yd/%h/%S00*_R_%Y%n%h%M_15M_01S_MO.crx.gz E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+IGS_OBS3_HOUR   ftp://igs.gnsswhu.cn/pub/gps/data/hourly/%Y/%n/%h/%S00*_R_%Y%n%h%M_01H_30S_MO.crx.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+IGS_BRDC    ftp://igs.gnsswhu.cn/pub/gps/data/daily/%Y/%n/%yp/BRDC00IGS_R_%Y%n0000_01D_MN.rnx.gz           E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\nav
+DLR_BRDC    ftp://igs.gnsswhu.cn/pub/gps/data/daily/%Y/%n/%yp/BRDM00DLR_S_%Y%n0000_01D_MN.rnx.gz           E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\nav
+DLR_BRDX    ftp://igs.gnsswhu.cn/pub/gps/data/daily/%Y/%n/%yp/BRDX00DLR_S_%Y%n0000_01D_MN.rnx.gz           E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\nav
+GOP_BRDC    ftp://epncb.oma.be/pub/obs/BRDC/%Y/BRDC00GOP_R_%Y%n0000_01D_MN.rnx.gz                          E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\nav
+
+#! DATA (BDSNAV)
+TARC_BRDC_CNAV ftp://ftp2.csno-tarc.cn/cnav/%Y/tarc%n0.%yb_cnav                                          E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\nav
+TARC_BRDC_D1D2 ftp://ftp2.csno-tarc.cn/cnav/%Y/tarc%n0.%yb.cmb                                           E:\PPP_AR-master\GNSS_DATA\%Y\%n\products\nav
+
+#! DATA (GA)
+GA_OBS2  ftp://ftp.data.gnss.ga.gov.au/daily/%Y/%n/%s%n0.%yd.gz                           E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+GA_OBS3  ftp://ftp.data.gnss.ga.gov.au/daily/%Y/%n/%S00*_%Y%n0000_01D_30S_MO.crx.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+
+#! DATA (CURTIN)
+CURTIN_OBS2  http://saegnss2.curtin.edu.au/ldc/rinex/daily/%Y/%n/%s%n0.%yd.Z                             E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+CURTIN_OBS3  http://saegnss2.curtin.edu.au/ldc/rinex3/daily/%Y/%n/%S00AUS_R_%Y%n0000_01D_30S_MO.crx.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+
+#! DATA (HKCORS)
+HK_OBS2_01S  ftp://ftp.geodetic.gov.hk/rinex2/%Y/%n/%s/1s/%s%n%H.%yd.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs  
+HK_OBS2_05S  ftp://ftp.geodetic.gov.hk/rinex2/%Y/%n/%s/5s/%s%n%H.%yd.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+HK_OBS2_30S  ftp://ftp.geodetic.gov.hk/rinex2/%Y/%n/%s/30s/%s%n0.%yd.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+HK_OBS3_01S  ftp://ftp.geodetic.gov.hk/rinex3/%Y/%n/%s/1s/%S00HKG_R_%Y%n%h00_01H_01S_MO.crx.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs  
+HK_OBS3_05S  ftp://ftp.geodetic.gov.hk/rinex3/%Y/%n/%s/5s/%S00HKG_R_%Y%n%h00_01H_05S_MO.crx.gz   E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+HK_OBS3_30S  ftp://ftp.geodetic.gov.hk/rinex3/%Y/%n/%s/30s/%S00HKG_R_%Y%n0000_01D_30S_MO.crx.gz  E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+
+#! DATA (NGS)
+NGS_OBS2     https://geodesy.noaa.gov/corsdata/rinex/%Y/%n/%s/%s%n0.%yd.gz                       E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+
+#! DATA (PBO)
+PBO_OBS2     ftp://data-out.unavco.org/pub/rinex/obs/%Y/%n/%s%n0.%yd.Z                           E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+PBO_OBS3     ftp://data-out.unavco.org/pub/rinex3/obs/%Y/%n/%S00USA_R_%Y%n0000_01D_15S_MO.crx.gz E:\PPP_AR-master\GNSS_DATA\%Y\%n\obs
+
+#！ATX
+IGS_ATX05 https://files.igs.org/pub/station/general/igs05.atx   E:\PPP_AR-master\GNSS_DATA\atx
+IGS_ATX08 https://files.igs.org/pub/station/general/igs08.atx   E:\PPP_AR-master\GNSS_DATA\atx
+IGS_ATX14 https://files.igs.org/pub/station/general/igs14.atx   E:\PPP_AR-master\GNSS_DATA\atx
+
+

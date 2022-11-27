@@ -1,0 +1,7 @@
+VERSION 2
+CODE RAPID GNSS ERP INFORMATION FOR (MIDDLE) DAY 001, 2020       02-JAN-20 14:16
+-------------------------------------------------------------------------------------------------------------------------------------------------
+NUTATION MODEL       : IAU2000R06               SUBDAILY POLE MODEL: IERS2010
+  MJD         X-P      Y-P   UT1UTC    LOD   S-X   S-Y  S-UT  S-LD  NR  NF  NT   X-RT   Y-RT  S-XR  S-YR C-XY C-XT C-YT   DPSI   DEPS  S-DP  S-DE
+              E-6"     E-6"    E-7S E-7S/D   E-6"  E-6" E-7S E-7S/D                 E-6"/D      E-6"/D    E-2  E-2  E-2    E-6"   E-6"  E-6"  E-6"
+58849.50    75628   282518 -1774500   4453     6     6     7     9 123  82  77  -2014    473    11    10    3   -1    4      0      0     0     0

@@ -1,0 +1,1 @@
+E:\PPP_AR-master\build\Bin\PPP_AR.exe -C E:\PPP_AR-master\conf\PPP\ppp_mgex_gbm1.conf -S GC -M PPP-KINE -A 0 -L 0
