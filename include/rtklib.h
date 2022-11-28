@@ -966,8 +966,8 @@ typedef struct {        /* antenna parameter type */
     char type[MAXANT];  /* antenna type */
     char code[MAXANT];  /* serial number or satellite code */
     gtime_t ts,te;      /* valid time start and end */
-    double off[NSYS*NFREQ][ 3]; /* phase center offset e/n/u or x/y/z (m) */
-    double var[NSYS*NFREQ][80*50]; /* phase center variation (m) */
+    double off[2*NFREQ][ 3]; /* phase center offset e/n/u or x/y/z (m) */
+    double var[2*NFREQ][80*50]; /* phase center variation (m) */
                         /* el=90,85,...,0 or nadir=0,1,2,3,... (deg) */
     double dazi;
     double zen1,zen2,dzen;

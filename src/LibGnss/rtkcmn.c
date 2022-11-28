@@ -2943,29 +2943,29 @@ static int readantex(const char *file, pcvs_t *pcvs)
             }
             else if(sys=='E'){
 #ifdef ENAGAL
-                if(f==1) freq=f+2*NFREQ;       /*E1*/
-                else if(f==7) freq=2+2*NFREQ;  /*E5b*/
-                else if(f==5) freq=3+2*NFREQ;  /*E5a*/
-                else if(f==6) freq=4+2*NFREQ;  /*E6*/
-                else if(f==8) freq=5+2*NFREQ;  /*E5ab*/
+                if(f==1) freq=f;       /*E1*/
+                else if(f==7) freq=2;  /*E5b*/
+                else if(f==5) freq=3;  /*E5a*/
+                else if(f==6) freq=4;  /*E6*/
+                else if(f==8) freq=5;  /*E5ab*/
 #else
                 freq=0;
 #endif
             }
             else if(sys=='C'){
 #ifdef ENACMP
-                freq=f+3*NFREQ;               /*B1I*/
-                if(f==7) freq=2+3*NFREQ;      /*B2I*/
-                else if(f==6) freq=3+3*NFREQ; /*B3I*/
+                freq=f;               /*B1I*/
+                if(f==7) freq=2;      /*B2I*/
+                else if(f==6) freq=3; /*B3I*/
 #else
                 freq=0;
 #endif
             }
             else if(sys=='J'){
 #ifdef  ENAQZS
-                if(f==1) freq=f+4*NFREQ;
-                else if(f==2) freq=2+4*NFREQ;
-                else if(f==5) freq=3+4*NFREQ;
+                if(f==1) freq=f;
+                else if(f==2) freq=2;
+                else if(f==5) freq=3;
 #else
                 freq=0;
 #endif
@@ -6431,21 +6431,22 @@ extern void antmodel_s(const pcv_t *pcv, double nadir, double *dant)
     trace(4,"antmodel_s: nadir=%6.1f\n",nadir*R2D);
     
     for (i=0;i<NFREQ;i++) {
-        if(sys==SYS_GPS){
+        //if(sys==SYS_GPS){
+        if(sys==SYS_GPS||sys==SYS_GAL||sys==SYS_CMP||sys==SYS_QZS){
             dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i]);
         }
         else if(sys==SYS_GLO){
             dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+NFREQ]);
         }
-        else if(sys==SYS_GAL){
-            dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+2*NFREQ]);
-        }
-        else if(sys==SYS_CMP){
-            dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+3*NFREQ]);
-        }
-        else if(sys==SYS_QZS){
-            dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+4*NFREQ]);
-        }
+        //else if(sys==SYS_GAL){
+        //    dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+2*NFREQ]);
+        //}
+        //else if(sys==SYS_CMP){
+        //    dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+3*NFREQ]);
+        //}
+        //else if(sys==SYS_QZS){
+        //    dant[i]=interpvar0(18,nadir*R2D*5.0,pcv->var[i+4*NFREQ]);
+        //}
     }
     trace(5,"antmodel_s: dant=%6.3f %6.3f\n",dant[0],dant[1]);
 }

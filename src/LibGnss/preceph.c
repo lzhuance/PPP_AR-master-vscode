@@ -942,8 +942,8 @@ extern void satantoff(const prcopt_t *popt,gtime_t time, const double *rs, int s
         freq[0]=FREQ1;
         freq[1]=FREQ2;
         if(sys==SYS_QZS){
-            j=0+4*NFREQ;
-            k=1+4*NFREQ;
+            j=0;
+            k=1;
         }
     }
     else if (sys==SYS_GLO) { /* G1-G2 */
@@ -955,21 +955,21 @@ extern void satantoff(const prcopt_t *popt,gtime_t time, const double *rs, int s
     else if (sys==SYS_GAL) { /* E1-E5a */
         freq[0]=FREQ1;
         freq[1]=FREQ5;
-        j=0+2*NFREQ;
-        k=2+2*NFREQ;
+        j=0;
+        k=2;
     }
     else if (sys==SYS_CMP) {
         if(!strcmp(popt->ac_name,"com")){/* B1I-B2I */
             freq[0]=FREQ1_CMP;
             freq[1]=FREQ2_CMP;
-            j=0+3*NFREQ;
-            k=1+3*NFREQ;
+            j=0;
+            k=1;
         }
         else{ /* B1I-B3I */
             freq[0]=FREQ1_CMP;
             freq[1]=FREQ3_CMP;
-            j=0+3*NFREQ;
-            k=2+3*NFREQ;
+            j=0;
+            k=2;
         }
     }
     else return;
