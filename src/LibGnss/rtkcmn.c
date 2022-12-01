@@ -4645,11 +4645,11 @@ extern void trace(int level, const char *format, ...)
         return;
     }
 
-    if (level<=level_trace) {
-        va_start(ap,format); vfprintf(stdout,format,ap); va_end(ap);
-        fflush(stdout);
-        return;
-    }
+    //if (level<=level_trace) {
+    //    va_start(ap,format); vfprintf(stdout,format,ap); va_end(ap);
+    //    fflush(stdout);
+    //    return;
+    //}
 
     if (!fp_trace||level>level_trace) return;
 

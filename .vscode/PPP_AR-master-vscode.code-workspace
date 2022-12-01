@@ -4,5 +4,10 @@
 			"path": ".."
 		}
 	],
-	"settings": {"cmake.generator": "MinGW Makefiles"}
+	"settings": {
+		"cmake.generator": "MinGW Makefiles",
+		"files.associations": {
+			"rtklib.h": "c"
+		}
+	}
 }

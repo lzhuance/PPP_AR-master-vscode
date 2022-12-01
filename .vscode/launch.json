@@ -10,7 +10,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
-            "args": ["-C","E:/PPP_AR-master/conf/PPP/ppp_mgex_wum1.conf","-S","GE","-M","PPP-KINE","-A","7","-L","0"],
+            "args": ["-C","E:/PPP_AR-master/conf/PPP/ppp_mgex_wum1.conf","-S","GE","-M","PPP-KINE","-A","7","-L","3"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
